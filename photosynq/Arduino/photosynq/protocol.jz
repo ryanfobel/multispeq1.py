@@ -1,0 +1,33 @@
+[
+    {
+        "number_samples": [
+            19
+        ],
+        "pulses": [
+            100
+        ],
+        "pulsedistance": [
+            16667
+        ],
+        "m_intensities": [
+            [
+                100
+            ]
+        ],
+        "pulsesize": [
+            30
+        ],
+        "detectors": [
+            [
+                1
+            ]
+        ],
+        "meas_lights": [
+            [
+                5
+            ]
+        ],
+        "protocols": 10,
+        "macro_id": "158"
+    }
+]

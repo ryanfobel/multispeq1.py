@@ -1,0 +1,16 @@
+
+power states are:   
+
+1) 5V and +/- detector voltages and 3V on.  300ma?  Only in this state while executing a protocol or similar task.
+
+2) 3V on.   XX ma.  Leaves this state for state 3 after idle for ~4 min 
+
+3) sleep - MCU sleeps 1/3 second, then wakes up and checks accelerometer.  3V remains on for Bluetooth connection.  If accelerometer is seen, reboot (which resets everything). XX ma.  Leaves this state for state 4 after ~4 hours.
+
+4) deep sleep.  3V is turned off.   XX ma. Only way to recover is to press the button (causing a complete reset).
+
+
+USB connected to a computer (not a charger) will prevent states 3 and 4.
+
+Not clear what behavior should be when battery is low.  Maybe go straight to deep sleep.
+

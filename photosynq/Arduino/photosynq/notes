@@ -1,0 +1,46 @@
+
+datum - entire response from device
+
+measurement - only one, except can be repeated, consists of protocols
+
+protocol, can be multiple and/or each one be repeated N times
+
+averages - a single protocol, repeated N times with the average reported
+protocol_repeats - a single protocol, repeated N times with each one reported
+
+pulse set/cycle
+
+pulses
+
+// notes about packet protocol
+
+up to 236 byte packets plus a 16 bit crc at the end?
+null terminated with COBS
+or use ascii only with a ctrl characters
+Ascii ^F is ACK, NAK is ^U, STX/ETX to frame packet
+no sequence number, resend until success or timeout
+this will slow things down a little
+also do compression (requires binary)?
+https://www.embeddedrelated.com/showarticle/113.php
+
+
+// available in stock Arduino config
+
+AccelStepper       CapacitiveSensor  i2c_t3             OSC             Time
+Adafruit_CC3000    DmxSimple         ILI9341_t3         Ping            TimeAlarms
+Adafruit_GFX       DogLcd            IRremote           PS2Keyboard     TimerOne
+Adafruit_ILI9340   DS1307RTC         Keypad             PulsePosition   TimerThree
+Adafruit_ILI9341   EEPROM            ks0108             PWMServo        TinyGPS
+Adafruit_NeoPixel  Encoder           LedControl         RadioHead       Tlc5940
+Adafruit_nRF8001   Entropy           LedDisplay         SD              TouchScreen
+Adafruit_RA8875    Ethernet          LiquidCrystal      SerialFlash     UTFT
+Adafruit_SSD1306   FastCRC           LiquidCrystalFast  Servo           VirtualWire
+Adafruit_ST7735    FastLED           LowPower           ShiftPWM        Wire
+Adafruit_STMPE610  Firmata           Metro              Snooze          x10
+Adafruit_VS1053    FlexCAN           MIDI               SoftPWM         XBee
+ADC                FlexiTimer2       MsTimer2           SoftwareSerial  XPT2046_Touchscreen
+AltSoftSerial      FreqCount         NewPing            SPI
+Artnet             FreqMeasure       OctoWS2811         SPIFlash
+Audio              FreqMeasureMulti  OneWire            ST7565
+Bounce             FrequencyTimer2   openGLCD           TFT_ILI9163C
+
