@@ -1,0 +1,13 @@
+include COPYING
+include README.md
+include RELEASE-VERSION
+include version.py
+include pavement.py
+include paver-minilib.zip
+include setup.py
+include SConstruct
+recursive-include photosynq *
+recursive-exclude photosynq *.pyc
+recursive-exclude photosynq *.o
+recursive-exclude photosynq *.exe
+recursive-exclude photosynq .ipynb_checkpoints/*

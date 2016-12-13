@@ -1,0 +1,11 @@
+package photosynq;
+
+
+message State {
+  /* # State structure #
+   *
+   * This structure contains fields that can easily be updated through the
+   * `update_state` method, but are *not* saved across device resets (i.e., are
+   * only stored in RAM). */
+  optional uint32 test_uint32 = 1;
+}
