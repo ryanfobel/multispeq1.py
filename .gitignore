@@ -13,7 +13,6 @@ build/*
 */Arduino/*/*config_validate.h
 */Arduino/*/*state_validate.h
 */Arduino/library
-*/Arduino/*/NodeCommandProcessor.h
 *.o
 */protobuf/nano
 */protobuf/py
@@ -28,9 +27,5 @@ arduino_rpc/protobuf_commands.py
 *.swp
 .project
 .pydevproject
-teensy_minimal_rpc/ADC.py
-teensy_minimal_rpc/DMA.py
-teensy_minimal_rpc/PIT.py
-teensy_minimal_rpc/SIM.py
 *.exe
 .idea
