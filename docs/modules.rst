@@ -4,4 +4,4 @@ Project Modules
 .. toctree::
    :maxdepth: 4
 
-   photosynq
+   multispeq1

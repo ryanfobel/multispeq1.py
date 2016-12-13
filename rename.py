@@ -65,4 +65,4 @@ def parse_args(args=None):
 
 if __name__ == '__main__':
     args = parse_args()
-    main('.', 'photosynq', args.new_name)
+    main('.', 'multispeq1', args.new_name)

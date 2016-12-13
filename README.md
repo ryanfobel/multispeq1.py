@@ -1,4 +1,4 @@
-# photosynq #
+# multispeq1 #
 
 Template package for remote procedure call (RPC) project, utilizing
 [`base-node-rpc`][3].
@@ -15,14 +15,14 @@ This package contains:
 
 The Python package can be installed through `pip` using the following command:
 
-    pip install photosynq
+    pip install multispeq1
 
 ## Upload firmware ##
 
 To upload the pre-compiled firmware included in the Python package, run the
 following command:
 
-    python -m photosynq.bin.upload <board type>
+    python -m multispeq1.bin.upload <board type>
 
 replacing `<board type>` with either `uno` or `mega2560`, depending on the
 model of the board.
@@ -31,13 +31,13 @@ This will attempt to upload the firmware by automatically discovering the
 serial port.  On systems with multiple serial ports, use the `-p` command line
 argument to specify the serial port to use.  For example:
 
-    python -m photosynq.bin.upload -p COM3 uno
+    python -m multispeq1.bin.upload -p COM3 uno
 
 --------------------------------------------------
 
 ## Usage ##
 
-After uploading the firmware to the board, the `photosynq.Proxy` class can be
+After uploading the firmware to the board, the `multispeq1.Proxy` class can be
 used to interact with the Arduino device.
 
 See the session log below for example usage.
@@ -45,7 +45,7 @@ See the session log below for example usage.
 ### Example interactive session ###
 
     >>> from serial import Serial
-    >>> from photosynq import Proxy
+    >>> from multispeq1 import Proxy
 
 Connect to serial device.
 
@@ -64,7 +64,7 @@ Query descriptive properties of device.
 
     >>> proxy.properties()
     base_node_software_version                               0.9.post8.dev141722557
-    name                                                                  photosynq
+    name                                                                  multispeq1
     manufacturer                                                        Wheeler Lab
     url                           http://github.com/wheeler-microfluidics/rpc-p...
     software_version                                                            0.1
@@ -106,7 +106,7 @@ To persist changes to *configuration* across device reset - *not* state - use
 
 ### Other methods ###
 
-Below is a list of the attributes of the `photosynq.Proxy` Python class.  Note
+Below is a list of the attributes of the `multispeq1.Proxy` Python class.  Note
 that many of the [Arduino API][1] functions (e.g., `pin_mode`, `digital_write`,
 etc.) are exposed through the RPC API.
 
@@ -143,8 +143,8 @@ etc.) are exposed through the RPC API.
 
 ## Firmware development ##
 
-The Arduino firmware/sketch is located in the `photosynq/Arduino/photosynq`
-directory.  The key functionality is defined in the `photosynq::Node` class in
+The Arduino firmware/sketch is located in the `multispeq1/Arduino/multispeq1`
+directory.  The key functionality is defined in the `multispeq1::Node` class in
 the file `Node.h`.
 
 Running the following command will build the firmware using [SCons][2] for
@@ -156,7 +156,7 @@ Python package, ready for distribution.
 ### Adding new remote procedure call (RPC) methods ###
 
 New methods may be added to the RPC API by adding new methods to the
-`photosynq::Node` class in the file `Node.h`.
+`multispeq1::Node` class in the file `Node.h`.
 
 # Author #
 

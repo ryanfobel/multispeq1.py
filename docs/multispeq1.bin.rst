@@ -4,7 +4,7 @@ bin Package
 :mod:`upload` Module
 --------------------
 
-.. automodule:: photosynq.bin.upload
+.. automodule:: multispeq1.bin.upload
     :members:
     :undoc-members:
     :show-inheritance:

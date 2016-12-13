@@ -13,15 +13,19 @@
 #include "util.h"
 #include "malloc.h"
 #include <i2c_t3.h>
+#include "Node.h"
+#include "NodeCommandProcessor.h"
+#include "PAR.h"
 
 // function declarations
+
+using namespace PAR;
 
 inline static void startTimers(unsigned _pulsedistance);
 inline static void stopTimers(void);
 void reset_freq(void);
 void upgrade_firmware(void);            // for over-the-air firmware updates
 void boot_check(void);                  // for over-the-air firmware updates
-int get_light_intensity(int x);
 static void recall_save(JsonArray _recall_eeprom, JsonArray _save_eeprom);
 void get_set_device_info(const int _set);
 void temp_get_set_device_info();
@@ -32,7 +36,6 @@ void MAG3110_read (int *x, int *y, int *z);
 void MMA8653FC_read(int *axeXnow, int *axeYnow, int *axeZnow);
 void MMA8653FC_standby(void);
 float MLX90615_Read(int TaTo);
-uint16_t par_to_dac (float _par, uint16_t _pin);
 float light_intensity_raw_to_par (float _light_intensity_raw, float _r, float _g, float _b);
 unsigned long requestCo2(int timeout);
 static void print_all (void);
@@ -96,9 +99,26 @@ void loop() {
   crc32_init();
 
   if (c == '[')
+  {
     do_protocol();          // start of json
+  }
+  else if (c == '|')
+  {
+    node_obj.serial_handler_.receiver()(Serial.available());
+    if (node_obj.serial_handler_.packet_ready()) {
+      node_obj.serial_handler_.process_packet(command_processor);
+    }
+    // Parse all new bytes that are available.  If the parsed bytes result in a
+    // completed packet, pass the complete packet to the command-processor to
+    // process the request.
+    if (node_obj.serial_handler_.packet_ready()) {
+      node_obj.serial_handler_.process_packet(command_processor);
+    }
+  }
   else
+  {
     do_command();           // received a non '[' char - processs command
+  }
 
   Serial_Flush_Output();
 

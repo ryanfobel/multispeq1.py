@@ -1,6 +1,6 @@
 from nose.tools import with_setup
 import numpy as np
-import photosynq as tr
+import multispeq1 as tr
 
 
 def setup_func():

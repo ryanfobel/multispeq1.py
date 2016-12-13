@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# photosynq documentation build configuration file, created by
+# multispeq1 documentation build configuration file, created by
 # sphinx-quickstart on Thu Dec 03 13:11:33 2015.
 #
 # This file is execfile()d with the current directory set to its
@@ -53,7 +53,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'photosynq'
+project = u'multispeq1'
 copyright = u'2015, Christian Fobel'
 author = u'Christian Fobel'
 
@@ -207,7 +207,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'photosynqdoc'
+htmlhelp_basename = 'multispeq1doc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -229,7 +229,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'photosynq.tex', u'teensy\\_minimal\\_rpc Documentation',
+  (master_doc, 'multispeq1.tex', u'teensy\\_minimal\\_rpc Documentation',
    u'Christian Fobel', 'manual'),
 ]
 
@@ -259,7 +259,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'photosynq', u'photosynq Documentation',
+    (master_doc, 'multispeq1', u'multispeq1 Documentation',
      [author], 1)
 ]
 
@@ -273,8 +273,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'photosynq', u'photosynq Documentation',
-   author, 'photosynq', 'One line description of project.',
+  (master_doc, 'multispeq1', u'multispeq1 Documentation',
+   author, 'multispeq1', 'One line description of project.',
    'Miscellaneous'),
 ]
 

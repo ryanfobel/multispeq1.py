@@ -1,9 +1,9 @@
-.. photosynq documentation master file, created by
+.. multispeq1 documentation master file, created by
    sphinx-quickstart on Thu Dec 03 13:11:33 2015.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to photosynq's documentation!
+Welcome to multispeq1's documentation!
 ==============================================
 
 Contents:

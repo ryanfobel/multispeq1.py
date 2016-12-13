@@ -3,7 +3,7 @@
 // Jon Zeeff 2016
 
 #define FILTER 0                // Change this to 0 for no filtering or 1 for filtering - note, must also reduce sampling speed
-#define AD7689_PIN 22		// CNV and chip select pin to use for SPI (10 is standard, 22 for photosynq 1.0)
+#define AD7689_PIN 22		// CNV and chip select pin to use for SPI (10 is standard, 22 for multispeq1 1.0)
 
 #include <SPI.h>		// include the new SPI library:
 #include "AD7689.h"

@@ -13,6 +13,9 @@
 #include "serial.h"
 #include <SPI.h>                    // include the new SPI library
 #include <i2c_t3.h>
+#include "PAR.h"
+
+using namespace PAR;
 
 unsigned int read_once(unsigned char address);
 void program_once(unsigned char address, unsigned int value);
@@ -26,7 +29,6 @@ int MMA8653FC_low_power(void);    // accelerometer
 int MMA8653FC_standby(void);      // accelerometer
 void MMA8653FC_read(int *axeXnow, int *axeYnow, int *axeZnow);
 void MLX90615_init(void);         // initialize contactless temperature sensor
-void PAR_init(void);              // initialize PAR and RGB sensor
 void unset_pins(void);            // change pin states to save power
 
 void  __attribute__ (( noinline, noclone, optimize("Os") )) turn_on_5V()
@@ -424,7 +426,7 @@ static SnoozeBlock config2;
 void deep_sleep()
 {
   //#ifdef USE_HIBERNATE
-  Snooze.hibernate( config );
+ // Snooze.hibernate( config );
   //#else
   //  Snooze.deepSleep( config );
   //#endif
@@ -633,7 +635,4 @@ void configure_bluetooth () {
   Serial_Print_Line("\"}");                  // close out JSON
   Serial_Print_Line("");
 }
-
-
-
 

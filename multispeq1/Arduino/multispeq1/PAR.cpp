@@ -23,6 +23,8 @@ extern float g_averaged;
 extern float b;
 extern float b_averaged;
 
+namespace PAR {
+
 static TCS3471 *par_sensor=0;
 
 
@@ -96,7 +98,7 @@ float light_intensity_raw_to_par (float _light_intensity_raw, float _r, float _g
 }
 
 int get_light_intensity(int _averages) {
-
+  
   r = par_sensor->readRData();
   g = par_sensor->readGData();
   b = par_sensor->readBData();
@@ -119,4 +121,6 @@ int get_light_intensity(int _averages) {
   light_intensity_averaged += light_intensity / _averages;
   return light_intensity;
 } // get_light_intensity()
+
+}  // namespace PAR
 

@@ -1,3 +1,5 @@
+#ifndef ___DEFINES__H___
+#define ___DEFINES__H___
 
 // Global defines and some misc functions
 
@@ -210,3 +212,5 @@ EXTERN unsigned long spec_data_average[SPEC_CHANNELS];            // saves the a
 EXTERN int idx;
 
 #undef EXTERN
+
+#endif // #ifndef ___DEFINES__H___

@@ -1,10 +1,10 @@
-photosynq Package
+multispeq1 Package
 ==========================
 
-:mod:`photosynq` Package
+:mod:`multispeq1` Package
 ---------------------------------
 
-.. automodule:: photosynq.__init__
+.. automodule:: multispeq1.__init__
     :members:
     :undoc-members:
     :show-inheritance:
@@ -12,7 +12,7 @@ photosynq Package
 :mod:`ADC` Module
 -----------------
 
-.. automodule:: photosynq.ADC
+.. automodule:: multispeq1.ADC
     :members:
     :undoc-members:
     :show-inheritance:
@@ -20,7 +20,7 @@ photosynq Package
 :mod:`DMA` Module
 -----------------
 
-.. automodule:: photosynq.DMA
+.. automodule:: multispeq1.DMA
     :members:
     :undoc-members:
     :show-inheritance:
@@ -28,7 +28,7 @@ photosynq Package
 :mod:`PIT` Module
 -----------------
 
-.. automodule:: photosynq.PIT
+.. automodule:: multispeq1.PIT
     :members:
     :undoc-members:
     :show-inheritance:
@@ -36,7 +36,7 @@ photosynq Package
 :mod:`SIM` Module
 -----------------
 
-.. automodule:: photosynq.SIM
+.. automodule:: multispeq1.SIM
     :members:
     :undoc-members:
     :show-inheritance:
@@ -44,7 +44,7 @@ photosynq Package
 :mod:`adc_sampler` Module
 -------------------------
 
-.. automodule:: photosynq.adc_sampler
+.. automodule:: multispeq1.adc_sampler
     :members:
     :undoc-members:
     :show-inheritance:
@@ -52,7 +52,7 @@ photosynq Package
 :mod:`config` Module
 --------------------
 
-.. automodule:: photosynq.config
+.. automodule:: multispeq1.config
     :members:
     :undoc-members:
     :show-inheritance:
@@ -60,7 +60,7 @@ photosynq Package
 :mod:`node` Module
 ------------------
 
-.. automodule:: photosynq.node
+.. automodule:: multispeq1.node
     :members:
     :undoc-members:
     :show-inheritance:
@@ -68,7 +68,7 @@ photosynq Package
 :mod:`proxy` Module
 -------------------
 
-.. automodule:: photosynq.proxy
+.. automodule:: multispeq1.proxy
     :members:
     :undoc-members:
     :show-inheritance:
@@ -78,5 +78,5 @@ Subpackages
 
 .. toctree::
 
-    photosynq.bin
+    multispeq1.bin
 

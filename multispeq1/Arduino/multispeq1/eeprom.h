@@ -1,3 +1,5 @@
+#ifndef ___eeprom__H___
+#define ___eeprom__H___
 
 // Many variables used have to be stored/retrieved from eeprom.  All such variables are defined in this structure.
 // This structure is stored directly in eeprom memory
@@ -12,6 +14,7 @@
 // this structure overlays eeprom ram
 
 #include <stdint.h>
+#include "defines.h"
 
 const int NUM_USERDEFS = 115;
 
@@ -78,13 +81,6 @@ class eeprom_class
     volatile char sleep;     // TODO set to 1 to sleep on boot
 };
 
-// where to store permanent data (teensy 3 specific)
-#define FlexRAM ((eeprom_class *)0x14000000)
-
-#ifndef EXTERN
 extern class eeprom_class * eeprom;
-#else
-class eeprom_class * eeprom = FlexRAM;
-#endif
 
-#undef EXTERN
+#endif // #ifndef ___eeprom__H___
